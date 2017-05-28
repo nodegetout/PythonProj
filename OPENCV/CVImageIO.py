@@ -14,7 +14,7 @@ im = Image.open('./OPENCV/test.jpg')
 
 while True:
     #cv2.namedWindow("Imread Test Window")
-    #cv2.imshow("Imread Test Window",img)
+    cv2.imshow("Imread Test Window",img)
     imRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     print 'cv2.imread',img.shape
     #print 'Image.open' , im
