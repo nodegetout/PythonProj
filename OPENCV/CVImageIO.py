@@ -9,15 +9,15 @@ print h,m
 
 cv2.imshow('test.jpg',im)
 """
-img = cv2.imread("test.jpg",1)
-im = Image.open("test.jpg")
+img = cv2.imread('./OPENCV/test.jpg',1)
+im = Image.open('./OPENCV/test.jpg')
 
 while True:
     #cv2.namedWindow("Imread Test Window")
-    cv2.imshow("Imread Test Window",img)
+    #cv2.imshow("Imread Test Window",img)
     imRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     print 'cv2.imread',img.shape
-    print 'Image.open' , im
+    #print 'Image.open' , im
     #im = img[:, :, (2, 1, 0)] 
     plt.imshow(imRGB)
     plt.show("Pyplot Show Image")
