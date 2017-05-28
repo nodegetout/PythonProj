@@ -1,0 +1,30 @@
+8
+
+dir
+0
+https://pygraphics.googlecode.com/svn/trunk/MacInstallers/PyGraphics%202.0.pkg/Contents/Resources/en.lproj
+https://pygraphics.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+Description.plist
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
