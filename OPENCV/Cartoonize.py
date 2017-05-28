@@ -1,3 +1,4 @@
+#move scripts into the OPENCV folder/finder
 import cv2
 import numpy as np
 cap = cv2.VideoCapture(0)
