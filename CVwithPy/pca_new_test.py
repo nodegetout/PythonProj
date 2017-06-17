@@ -4,7 +4,7 @@ import numpy as np
 from pca_new import pca
 from PCA import pca_book
 
-imX = np.array(Image.open('test.jpg').convert('L'))
+imX = np.array(Image.open('CVwithPy/test.jpg').convert('L'))
 n,m = imX.shape[0:2]
 points = []
 for i in range(n):

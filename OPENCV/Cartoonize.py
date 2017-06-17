@@ -21,19 +21,8 @@ while True:
     edge = cv2.Laplacian(median_blur,cv2.CV_8U,5)
     #threshold mask : return [retval,dst]
     mask = cv2.threshold(edge,8,255,cv2.THRESH_BINARY_INV)
-    #mask = cv2.threshold(mask[1],8,255,cv2.THRESH_BINARY_INV)
-    #mask = cv2.threshold(mask[1],8,255,cv2.THRESH_BINARY_INV)
-    #print mask
-    #blur = cv2.GaussianBlur(im,(0,0),0)
-
-    #colorize and cartoonify
-    #smallSize = (im.shape[0],im.shape[1])
-    #smallImg = cv2.Mat(smallSize,cv2.CV_8UC3)
-    #smallImg = M(smallSize,cv2.CV_8UC3)
-
-    #resize the video : notice that the shape is [height,width]
-    smallSize = im.shape[1]/2,im.shape[0]/2,im.shape[2]
-    smallImg = cv2.resize(mask[1],smallSize[:2],cv2.INTER_LINEAR)
-    cv2.imshow('video capture test',smallImg)
+    #show the image
+    cv2.imshow('video capture test',mask[1])
+    #char keypress = cv2.waitKey(20)
     if cv2.waitKey(10) == 27:
         break
