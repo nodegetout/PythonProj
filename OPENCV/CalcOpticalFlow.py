@@ -21,16 +21,16 @@ def draw_flow(im,flow,step=16):
 
 #the main video capture segment
 cap = cv2.VideoCapture(0)
-cap.set(CV_CAP_PROP_FRAME_WIDTH,640)
-cap.set(CV_CAP_PROP_FRAME_HEIGHT,360)
+#cap.set(CV_CAP_PROP_FRAME_WIDTH,640)
+#cap.set(CV_CAP_PROP_FRAME_HEIGHT,360)
 ret,im = cap.read()
 prev_gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
 
 while True :
     ret,im = cap.read()
-    cap.set(CV_CAP_PROP_FRAME_WIDTH,640)
-    cap.set(CV_CAP_PROP_FRAME_HEIGHT,360)
-    print ret
+    #cap.set(CV_CAP_PROP_FRAME_WIDTH,640)
+    #cap.set(CV_CAP_PROP_FRAME_HEIGHT,360)
+    #print ret
     gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
 
     #flow = cv2.calcOpticalFlowFarneback(prevgray, gray, 0.5, 3, 15, 3, 5, 1.2, 0)
