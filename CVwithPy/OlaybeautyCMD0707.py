@@ -50,8 +50,14 @@ def beauty(src,dst,center,radius,strength,m_Stride):
                     t=np.ubyte(np.floor(t))
                     dst[j,i]= t
                 else:
-                    dst[j][i] = 0
-                    #dst[j][i] = src[int(posY)][int(posX)]
+                    #dst[j][i] = 0
+                    dst[j][i] = src[int(posY)][int(posX)]
+
+def Whitize(src):
+    i=j=0
+    for i in range(src.shape[0:1]):
+        for j in range(src.shape.pop[0:1]):
+            print (j,i)
 
 #parameters from cmd
 #fileName,imgName,para1,para2,para3,para4,para5,para6=sys.argv
@@ -62,8 +68,8 @@ para1 = 260
 para2 = 430
 para3 = 460
 para4 = 460
-para5 = 30
-para6 = -30
+para5 = 90
+para6 = 30
 
 im = cv2.imread(imgName)
 origin = cv2.imread(imgName)
@@ -76,6 +82,8 @@ beauty(src,dst,center1,para5,para6,2)
 center2=(int(para3),int(para4))
 src = dst.copy()
 beauty(dst,src,center2,para5,para6,2)
+
+Whitize(dst)
 #blur
 kernel = np.ones((1,1),np.float32)/1
 dst = cv2.filter2D(src,-1,kernel)
