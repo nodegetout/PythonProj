@@ -5,7 +5,7 @@ import numpy as np
 def draw_flow(im,flow,step=16):
     """"""
     h,w = im.shape[:2]
-    y,x = np.mgrid[step/2:h:step,step/2:w:step].reshape(2,-1)
+    y,x = np.mgrid[step/2:h:step,step/2:w:step].reshape(2,-1).astype(np.int32)
     fx,fy = flow[y,x].T
 
     lines = np.vstack([x,y,x+fx,y+fy]).T.reshape(-1,2,2)
@@ -34,7 +34,8 @@ while True :
     gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
 
     #flow = cv2.calcOpticalFlowFarneback(prevgray, gray, 0.5, 3, 15, 3, 5, 1.2, 0)
-    flow = cv2.calcOpticalFlowFarneback(prev_gray,gray,0.5,3,15,3,5,1.2,0)
+    flow = cv2.calcOpticalFlowFarneback(prev_gray,gray,None,0.5,3,15,3,5,1.2,1)
+    # flow = cv2.calcOpticalFlowFarneback(prev_gray,gray,flow=None,pyr_scale=0.5, levels=1, winsize=15,iterations=2,poly_n=5, poly_sigma=1.1, flags=0)
     prev_gray = gray
 
     cv2.imshow('Optical Flow',draw_flow(gray,flow))
