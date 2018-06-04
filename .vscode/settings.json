@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "D:\\Python36\\python3.exe",
+    "python.pythonPath": "D:\\Python\\Python36\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "yapf"
 }
