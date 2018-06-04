@@ -1,2 +1,0 @@
-echo: __name__ is echo
-After import, __name__ is __main__ and echo.__name__ is echo

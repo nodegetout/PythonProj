@@ -1,2 +1,0 @@
-class Arthropod(Organism):
-    pass

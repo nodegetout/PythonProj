@@ -1,2 +1,0 @@
->>> print rabbits,
-17>>>

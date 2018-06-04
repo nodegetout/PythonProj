@@ -1,2 +1,0 @@
->>> 'Albert' 'Einstein'
-'AlbertEinstein'
